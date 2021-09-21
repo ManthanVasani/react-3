@@ -8,7 +8,7 @@ function App() {
 
     return(
         <div>
-        <h1>Id Up: {data.id}</h1>
+        <h1>Id Up ++: {data.id}</h1>
         <button type="button" onClick={data.idIncrement}>Increment</button>
         <h1>Id Down: {data1.id1}</h1> 
         <button type="button" onClick={data1.idDecrement}>Decrement</button>
