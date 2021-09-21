@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import useCustomCounter from "./custom";
+import useCustomDecr from "./custom1";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const data = useCustomCounter();
+    const data1 = useCustomDecr();
+
+    return(
+        <div>
+        <h1>Id Up: {data.id}</h1>
+        <button type="button" onClick={data.idIncrement}>Increment</button>
+        <h1>Id Down: {data1.id1}</h1> 
+        <button type="button" onClick={data1.idDecrement}>Decrement</button>
+        </div> 
+    );
 }
 
 export default App;
